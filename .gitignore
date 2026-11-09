@@ -1,6 +1,28 @@
+# Entorno virtual
 venv/
-*.pyc
+ENV/
+env/
+
+# Python cache
 __pycache__/
-db.sqlite3
+*.py[cod]
+*$py.class
+*.so
+
+# Variables de entorno locales
 .env
+
+# Bases de datos locales
+*.sqlite3
+*.db
+
+# Herramientas de desarrollo / IDEs
 .vscode/
+.idea/
+*.swp
+*.swo
+
+# Pruebas y cobertura
+.pytest_cache/
+.coverage
+htmlcov/
