@@ -19,18 +19,6 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title=settings.PROJECT_NAME,
     version=settings.PROJECT_VERSION,
-    description="""
-    ## API REST para el Manejo de un Sistema Bibliotecario
-    
-    Desarrollado para el modulo **Utilizacion de Frameworks para el Desarrollo de Software**.
-    
-    ### Caracteristicas Principales:
-    * **Autenticacion y Autorizacion**: JWT tokens con roles (`ADMINISTRADOR`, `BIBLIOTECARIO`, `USUARIO`).
-    * **Seguridad**: Hash de contraseñas con `bcrypt`, sin exposicion de credenciales ni secretos en el codigo.
-    * **Gestion Bibliografica**: CRUD completo de Autores, Categorias y Libros.
-    * **Reglas de Negocio de Prestamos**: Control estricto de disponibilidad, historial y devoluciones.
-    * **Integridad Referencial**: Proteccion ante eliminaciones que comprometan relaciones.
-    """,
     lifespan=lifespan,
     docs_url="/docs",
     redoc_url="/redoc",
